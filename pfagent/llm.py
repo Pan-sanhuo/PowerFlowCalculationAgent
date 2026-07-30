@@ -59,33 +59,61 @@ class LLMClient:
     def __init__(self, config: LLMConfig):
         self.config = config
 
-    def chat_json(self, system_prompt: str, user_payload: dict[str, Any]) -> dict[str, Any]:
+    def chat_text(
+        self,
+        messages: list[dict[str, str]],
+        system_prompt: str | None = None,
+    ) -> dict[str, Any]:
         if not self.config.enabled:
             return {
                 "enabled": False,
                 "provider": self.config.provider,
-                "message": "未配置大模型 API key，已跳过 LLM 调用，使用规则诊断。",
+                "message": "未配置大模型 API Key，无法发起对话。",
             }
 
-        endpoint = _chat_endpoint(self.config.base_url)
+        request_messages: list[dict[str, str]] = []
+        if system_prompt:
+            request_messages.append({"role": "system", "content": system_prompt})
+        for item in messages:
+            role = str(item.get("role", "user"))
+            content = str(item.get("content", "")).strip()
+            if role in {"user", "assistant"} and content:
+                request_messages.append({"role": role, "content": content})
+        if not request_messages or request_messages[-1]["role"] != "user":
+            return {
+                "enabled": True,
+                "provider": self.config.provider,
+                "error": "对话消息为空或最后一条消息不是用户输入。",
+            }
+
+        return self._request(request_messages)
+
+    def chat_json(self, system_prompt: str, user_payload: dict[str, Any]) -> dict[str, Any]:
+        result = self.chat_text(
+            [{"role": "user", "content": json.dumps(user_payload, ensure_ascii=False, indent=2)}],
+            system_prompt=system_prompt,
+        )
+        if result.get("content"):
+            result["parsed"] = _parse_jsonish(str(result["content"]))
+        return result
+
+    def _request(self, messages: list[dict[str, str]]) -> dict[str, Any]:
         payload = {
             "model": self.config.model,
             "temperature": self.config.temperature,
-            "messages": [
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": json.dumps(user_payload, ensure_ascii=False, indent=2)},
-            ],
+            "messages": messages,
         }
-        request = urllib.request.Request(
-            endpoint,
-            data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
-            headers={
-                "Content-Type": "application/json",
-                "Authorization": f"Bearer {self.config.api_key}",
-            },
-            method="POST",
-        )
         try:
+            endpoint = _chat_endpoint(self.config.base_url)
+            request = urllib.request.Request(
+                endpoint,
+                data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
+                headers={
+                    "Content-Type": "application/json",
+                    "Authorization": f"Bearer {self.config.api_key}",
+                },
+                method="POST",
+            )
             with urllib.request.urlopen(request, timeout=self.config.timeout) as response:
                 raw = json.loads(response.read().decode("utf-8"))
         except urllib.error.HTTPError as exc:
@@ -95,13 +123,11 @@ class LLMClient:
             return {"enabled": True, "error": f"{type(exc).__name__}: {exc}", "provider": self.config.provider}
 
         content = raw.get("choices", [{}])[0].get("message", {}).get("content", "")
-        parsed = _parse_jsonish(content)
         return {
             "enabled": True,
             "provider": self.config.provider,
             "model": self.config.model,
             "content": content,
-            "parsed": parsed,
         }
 
 

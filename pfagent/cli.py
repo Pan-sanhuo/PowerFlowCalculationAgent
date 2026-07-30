@@ -9,6 +9,7 @@ from pathlib import Path
 import numpy as np
 
 from .agent import PowerFlowAgent
+from .defaults import DEFAULT_MATPOWER_PATH
 from .llm import LLMConfig
 
 
@@ -22,7 +23,7 @@ def main(argv: list[str] | None = None) -> None:
     run_p.add_argument("--out", default=None, help="输出目录，默认 runs/<case>_<timestamp>")
     run_p.add_argument("--max-rounds", type=int, default=20)
     run_p.add_argument("--no-auto-repair", action="store_true", help="只计算和诊断，不执行自动修复")
-    run_p.add_argument("--matpower-path", default=os.getenv("MATPOWER_PATH"), help="MATPOWER 根目录")
+    run_p.add_argument("--matpower-path", default=os.getenv("MATPOWER_PATH") or DEFAULT_MATPOWER_PATH, help="MATPOWER 根目录")
     _add_llm_args(run_p)
 
     inspect_p = sub.add_parser("inspect", help="只检查原始算例数据")
@@ -94,8 +95,8 @@ def _doctor() -> None:
     print(f"  numpy version: {np.__version__}")
     print("\n外部程序:")
     print(f"  matlab: {shutil.which('matlab') or '未找到'}")
-    matpower_path = os.getenv("MATPOWER_PATH")
-    print(f"  MATPOWER_PATH: {matpower_path or '未设置'}")
+    matpower_path = os.getenv("MATPOWER_PATH") or DEFAULT_MATPOWER_PATH
+    print(f"  MATPOWER_PATH/default: {matpower_path or '未设置'}")
     if matpower_path:
         print(f"  MATPOWER_PATH exists: {Path(matpower_path).exists()}")
 

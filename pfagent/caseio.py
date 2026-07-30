@@ -10,6 +10,8 @@ from typing import Any
 import numpy as np
 from pypower.loadcase import loadcase
 
+from .defaults import resolve_matpower_case
+
 
 REQUIRED_KEYS = ("baseMVA", "bus", "gen", "branch")
 
@@ -28,7 +30,15 @@ def load_power_case(path: str | Path) -> dict[str, Any]:
     - JSON files storing a ppc/mpc dict
     """
 
-    case_path = Path(path).resolve()
+    path_text = str(path).strip()
+    if path_text.lower().startswith("matpower:"):
+        case_path = resolve_matpower_case(path_text).resolve()
+    else:
+        case_path = Path(path).resolve()
+        if not case_path.exists() and case_path.suffix == "":
+            builtin_case = resolve_matpower_case(path_text).resolve()
+            if builtin_case.exists():
+                case_path = builtin_case
     if not case_path.exists():
         raise CaseLoadError(f"算例文件不存在: {case_path}")
 

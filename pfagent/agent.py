@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Any
 
 from .caseio import clone_case, load_power_case, write_pypower_case
+from .defaults import DEFAULT_MATPOWER_PATH, resolve_matpower_case
 from .llm import LLMClient, LLMConfig, diagnose_result_with_llm, inspect_data_with_llm, propose_repairs_with_llm
 from .models import AgentRunReport, RepairAction, SolveAttempt
 from .repairs import apply_flat_start, redispatch_generation, repair_obvious_data_errors, scale_load, tune_voltage_setpoints
@@ -32,11 +33,11 @@ class PowerFlowAgent:
     ):
         self.engine = engine.lower()
         self.llm = LLMClient(llm_config or LLMConfig())
-        self.matpower_path = matpower_path or os.getenv("MATPOWER_PATH")
+        self.matpower_path = matpower_path or os.getenv("MATPOWER_PATH") or DEFAULT_MATPOWER_PATH
         self.max_rounds = max_rounds
 
     def run(self, case_path: str | Path, output_dir: str | Path | None = None, auto_repair: bool = True) -> AgentRunReport:
-        case_file = Path(case_path).resolve()
+        case_file = self._case_file(case_path)
         out_dir = self._output_dir(case_file, output_dir)
         out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -184,7 +185,7 @@ class PowerFlowAgent:
         return write_report_bundle(report)
 
     def inspect(self, case_path: str | Path) -> tuple[dict[str, Any], list[dict[str, Any]], dict[str, Any]]:
-        ppc = load_power_case(case_path)
+        ppc = load_power_case(self._case_file(case_path))
         issues = validate_case(ppc)
         llm = inspect_data_with_llm(
             self.llm,
@@ -352,3 +353,9 @@ class PowerFlowAgent:
             return Path(output_dir).resolve()
         stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         return Path.cwd() / "runs" / f"{case_file.stem}_{stamp}"
+
+    def _case_file(self, case_path: str | Path) -> Path:
+        text = str(case_path).strip()
+        if text.lower().startswith("matpower:"):
+            return resolve_matpower_case(text, self.matpower_path).resolve()
+        return Path(case_path).resolve()

@@ -7,9 +7,7 @@ runs/
 .env
 .env.*
 !.env.example
-.coverage
-htmlcov/
-build/
-dist/
-.DS_Store
-Thumbs.db
+.streamlit/secrets.toml
+*.bak
+*.bak_*
+*.log
