@@ -423,10 +423,597 @@ def load_history_records() -> list[dict[str, Any]]:
         last_attempt = attempts[-1] if attempts else {}
         run_time = datetime.fromtimestamp(run_dir.stat().st_mtime)
         records.append(
-      ß^¶¶‰ËkºwµçAĞ¹•Ğ ‰•ÉÉ½Èˆ¤½È€ˆˆ°(€€€€€€€€€€€€€€€ô(€€€€€€€€€€€€¤(€€€€€€€‘…Ñ…™É…µ•}™É½´¡É½İÌ¤(€€€İ¥Ñ Ñ…ˆÈè(€€€€€€€‘…Ñ…™É…µ•}™É½´¡‘…Ñ„¹•Ğ ‰Ù…±¥‘…Ñ¥½¸ˆ°mt¤¤(€€€İ¥Ñ Ñ…ˆÌè(€€€€€€€‘…Ñ…™É…µ•}™É½´¡‘…Ñ„¹•Ğ ‰É•Á…¥ÉÌˆ°mt¤¤(€€€İ¥Ñ Ñ…ˆĞè(€€€€€€€É•¹‘•É}±±µ}Ù¥•Ü¡‘…Ñ„¤(€€€İ¥Ñ Ñ…ˆÔè(€€€€€€€É•¹‘•É}É•Á½ÉÑ}ÁÉ•Ù¥•Ü¡‘…Ñ„¤(()‘•˜É•¹‘•É}¡¥ÍÑ½Éå}µ…¹…•È ¤€´ø9½¹”è(€€€Ñ¥Ñ±•}½°°É•™É•Í¡}½°€ôÍĞ¹½±Õµ¹Ì¡lÔ°€Åt¤(€€€İ¥Ñ Ñ¥Ñ±•}½°è(€€€€€€€ÍĞ¹µ…É­‘½İ¸ ˆŒŒŒƒ–:–>Ë¢º‡º_¢ºÃ–öTˆ¤(€€€İ¥Ñ É•™É•Í¡}½°è(€€€€€€€¥˜ÍĞ¹‰ÕÑÑ½¸ ‹–"ßšZÃ–:–>Ë¢ºÃ–öTˆ°ÕÍ•}½¹Ñ…¥¹•É}İ¥‘Ñ õQÉÕ”¤è(€€€€€€€€€€€ÍĞ¹É•ÉÕ¸ ¤(€€€É•½É‘Ì€ô±½…‘}¡¥ÍÑ½Éå}É•½É‘Ì ¤(€€€¥˜¹½ĞÉ•½É‘Ìè(€€€€€€€ÍĞ¹¥¹™¼ ‹šjš^ƒ–:–>Ë¢ºÃ–öW¢şC¢†3’âš²‡¢º‡º_–B;¾ò3¢şg¦3’òk¢«–*£–ë:Ã¢ºÃ–öWˆ¤(€€€€€€€É•ÑÕÉ¸((€€€ÍĞ¹Í•ÍÍ¥½¹}ÍÑ…Ñ”¹Í•Ñ‘•™…Õ±Ğ ‰¡¥ÍÑ½Éå}•‘¥Ñ½É}Ù•ÉÍ¥½¸ˆ°€À¤((€€€Ñ…‰±•}É½İÌ€ôl(€€€€€€€ì(€€€€€€€€€€€€‹¢ºÃ–öU%ˆè¥Ñ•µl‹n»–öW–B4‰t°(€€€€€€€€€€€€‹¦'š.¤ˆè…±Í”°(€€€€€€€€€€€€‹º_’ú,ˆè¥Ñ•µl‹º_’ú,‰t°(€€€€€€€€€€€€‹–Ş—¢/–>¿¢†0ˆè¥Ñ•µl‹–Ş—¢/–>¿¢†0‰t°(€€€€€€€€€€€€‹šRÛšVlˆè¥Ñ•µl‹šRÛšVl‰t°(€€€€€€€€€€€€‹–Âw¢¾Wš²‡šVÀˆè¥Ñ•µl‹–Âw¢¾Wš²‡šVÀ‰t°(€€€€€€€€€€€€‹¢şC¢†3š^Û¦^Ğˆè¥Ñ•µl‹¢şC¢†3š^Û¦^Ğ‰t°(€€€€€€€ô(€€€€€€€™½È¥Ñ•´¥¸É•½É‘Ì(€€€t(€€€•‘¥Ñ½É}­•ä€ô˜‰¡¥ÍÑ½Éå}É•½É‘}Í•±•Ñ½É}íÍĞ¹Í•ÍÍ¥½¹}ÍÑ…Ñ”¹¡¥ÍÑ½Éå}•‘¥Ñ½É}Ù•ÉÍ¥½¹ôˆ(€€€•‘¥Ñ•‘}É½İÌ€ôÍĞ¹‘…Ñ…}•‘¥Ñ½È (€€€€€€€Á¹…Ñ…É…µ”¡Ñ…‰±•}É½İÌ¤°(€€€€€€€ÕÍ•}½¹Ñ…¥¹•É}İ¥‘Ñ õQÉÕ”°(€€€€€€€‘¥Í…‰±•õl‹º_’ú,ˆ°€‹–Ş—¢/–>¿¢†0ˆ°€‹šRÛšVlˆ°€‹–Âw¢¾Wš²‡šVÀˆ°€‹¢şC¢†3š^Û¦^Ğ‰t°(€€€€€€€½±Õµ¹}½¹™¥œõì(€€€€€€€€€€€€‹¢ºÃ–öU%ˆè9½¹”°(€€€€€€€€€€€€‹¦'š.¤ˆèÍĞ¹½±Õµ¹}½¹™¥œ¹¡•­‰½á½±Õµ¸ (€€€€€€€€€€€€€€€€‹¦'š.¤ˆ°(€€€€€€€€€€€€€€€¡•±Àô‹–.û¦'’âšv‡š"[–’kšv‡–:–>Ë¢ºÃ–öW–B;¾ò3–>¿’î—š&ç¦?–"ƒ¦f“ˆ°(€€€€€€€€€€€€€€€İ¥‘Ñ ô‰Íµ…±°ˆ°(€€€€€€€€€€€€€€€…±¥¹µ•¹Ğô‰•¹Ñ•Èˆ°(€€€€€€€€€€€€€€€‘•™…Õ±Ğõ…±Í”°(€€€€€€€€€€€€¤°(€€€€€€€€€€€€‹¢şC¢†3š^Û¦^ĞˆèÍĞ¹½±Õµ¹}½¹™¥œ¹Q•áÑ½±Õµ¸ (€€€€€€€€€€€€€€€€‹¢şC¢†3š^Û¦^Ğˆ°(€€€€€€€€€€€€€€€İ¥‘Ñ ô‰µ•‘¥Õ´ˆ°(€€€€€€€€€€€€€€€…±¥¹µ•¹Ğô‰•¹Ñ•Èˆ°(€€€€€€€€€€€€¤°(€€€€€€€ô°(€€€€€€€­•äõ•‘¥Ñ½É}­•ä°(€€€€¤(€€€Í•±•Ñ•‘}‘¥ÉÌ€ôÍ•Ğ (€€€€€€€•‘¥Ñ•‘}É½İÌ¹±½m•‘¥Ñ•‘}É½İÍl‹¦'š.¤‰t¹…ÍÑåÁ”¡‰½½°¤°€‹¢ºÃ–öU%‰t¹…ÍÑåÁ”¡ÍÑÈ¤¹Ñ½±¥ÍĞ ¤(€€€€€€€¥˜€‹¢ºÃ–öU%ˆ¥¸•‘¥Ñ•‘}É½İÌ¹½±Õµ¹Ì(€€€€€€€•±Í”mt(€€€€¤(€€€Í•±•Ñ•‘}É•½É‘Ì€ôm¥Ñ•´™½È¥Ñ•´¥¸É•½É‘Ì¥˜¥Ñ•µl‹n»–öW–B4‰t¥¸Í•±•Ñ•‘}‘¥ÉÍt((€€€Í•±•Ñ•‘}±…‰•°€ôÍĞ¹Í•±•Ñ‰½à ‹¦'š.§¢šš~—r/j–:–>Ë¢ºÃ–öTˆ°m¥Ñ•µl‹šbû’ë–B7À‰t™½È¥Ñ•´¥¸É•½É‘Ít¤(€€€Í•±•Ñ•€ô¹•áĞ¡¥Ñ•´™½È¥Ñ•´¥¸É•½É‘Ì¥˜¥Ñ•µl‹šbû’ë–B7À‰t€ôôÍ•±•Ñ•‘}±…‰•°¤(€€€ŒÄ°ŒÈ€ôÍĞ¹½±Õµ¹Ì¡lÄ°€Åt¤(€€€İ¥Ñ ŒÄè(€€€€€€€½Á•¹}±¥­•€ôÍĞ¹‰ÕÑÑ½¸ ‹š&O–ò¢¾—–:–>Ë¢ºÃ–öTˆ°ÕÍ•}½¹Ñ…¥¹•É}İ¥‘Ñ õQÉÕ”¤(€€€İ¥Ñ ŒÈè(€€€€€€€‘•±•Ñ•}±¥­•€ôÍĞ¹‰ÕÑÑ½¸ (€€€€€€€€€€€˜‹–"ƒ¦f“¦'’â·–:–>Ë¢ºÃ–öW¾ò!í±•¸¡Í•±•Ñ•‘}É•½É‘Ì¥÷¾ò$ˆ°(€€€€€€€€€€€‘¥Í…‰±•õ¹½ĞÍ•±•Ñ•‘}É•½É‘Ì°(€€€€€€€€€€€ÕÍ•}½¹Ñ…¥¹•É}İ¥‘Ñ õQÉÕ”°(€€€€€€€€¤((€€€¥˜‘•±•Ñ•}±¥­•è(€€€€€€€™…¥±•è±¥ÍÑmÍÑÉt€ômt(€€€€€€€™½ÈÉ•½É¥¸Í•±•Ñ•‘}É•½É‘Ìè(€€€€€€€€€€€ÑÉäè(€€€€€€€€€€€€€€€‘•±•Ñ•}¡¥ÍÑ½Éå}É•½É¡É•½É¤(€€€€€€€€€€€•á•ÁĞá•ÁÑ¥½¸…Ì•áŒè(€€€€€€€€€€€€€€€™…¥±•¹…ÁÁ•¹¡˜‰íÉ•½É‘lŸn»–öW–B4u÷¾òiíÑåÁ”¡•áŒ¤¹}}¹…µ•}}ôèí•áôˆ¤(€€€€€€€¥˜™…¥±•è(€€€€€€€€€€€ÍĞ¹•ÉÉ½È ‹¦£–"–:–>Ë¢ºÃ–öW–"ƒ¦f“–’Ç¢Ò—¾òiq¸ˆ€¬€‰q¸ˆ¹©½¥¸¡™…¥±•¤¤(€€€€€€€•±Í”è(€€€€€€€€€€€ÍĞ¹Í•ÍÍ¥½¹}ÍÑ…Ñ”¹¡¥ÍÑ½Éå}•‘¥Ñ½É}Ù•ÉÍ¥½¸€¬ô€Ä(€€€€€€€€€€€ÍĞ¹ÍÕ•ÍÌ¡˜‹–ŞË–"ƒ¦fí±•¸¡Í•±•Ñ•‘}É•½É‘Ì¥ôƒšv‡–:–>Ë¢ºÃ–öWˆ¤(€€€€€€€€€€€ÍĞ¹É•ÉÕ¸ ¤((€€€¥˜½Á•¹}±¥­•è(€€€€€€€‘…Ñ„€ô±½…‘}©Í½¸¡A…Ñ ¡Í•±•Ñ•‘l‹š*—–F))M=8‰t¤¤(€€€€€€€¥˜‘…Ñ„è(€€€€€€€€€€€ÍĞ¹µ…É­‘½İ¸¡˜ˆŒŒŒŒƒš¶–r£š~—r/¾òiíÍ•±•Ñ•‘lŸn»–öW–B4uôˆ¤(€€€€€€€€€€€É•¹‘•É}É•Á½ÉÑ}‘…Ñ„¡‘…Ñ„¤(€€€€€€€•±Í”è(€€€€€€€€€€€ÍĞ¹•ÉÉ½È ‹š^ƒšÎW¢¾ï–>[¢¾—–:–>Ë¢ºÃ–öWjÉ•Á½ÉĞ¹©Í½»ˆ¤(()‘•˜}É•¹‘•É}É••¹Ñ}É•ÍÕ±Ñ}¥™}…Ù…¥±…‰±” ¤€´ø9½¹”è(€€€™¥¹¥Í¡•‘}‘¥È€ôA…Ñ ¡ÍĞ¹Í•ÍÍ¥½¹}ÍÑ…Ñ”¹±…ÍÑ}™¥¹¥Í¡•‘}½ÕÑ}‘¥È¤¥˜ÍĞ¹Í•ÍÍ¥½¹}ÍÑ…Ñ”¹•Ğ ‰±…ÍÑ}™¥¹¥Í¡•‘}½ÕÑ}‘¥Èˆ¤•±Í”9½¹”(€€€¥˜™¥¹¥Í¡•‘}‘¥È…¹€¡™¥¹¥Í¡•‘}‘¥È€¼€‰É•Á½ÉĞ¹©Í½¸ˆ¤¹•á¥ÍÑÌ ¤è(€€€€€€€‘…Ñ„€ô±½…‘}©Í½¸¡™¥¹¥Í¡•‘}‘¥È€¼€‰É•Á½ÉĞ¹©Í½¸ˆ¤(€€€€€€€¥˜‘…Ñ„è(€€€€€€€€€€€ÍĞ¹µ…É­‘½İ¸ ˆŒŒŒƒšr¢şG’âš²‡¢º‡º_îOšzpˆ¤(€€€€€€€€€€€É•¹‘•É}É•Á½ÉÑ}‘…Ñ„¡‘…Ñ„¤(()‘•˜}É•¹‘•É}±¥Ù•}…É•…}‰½‘ä ¤€´ø9½¹”è(€€€É•¹‘•É}©½‰}½¹ÑÉ½° ¤(€€€}É•¹‘•É}É••¹Ñ}É•ÍÕ±Ñ}¥™}…Ù…¥±…‰±” ¤(()¥˜¡…Í…ÑÑÈ¡ÍĞ°€‰™É…µ•¹Ğˆ¤è(€€€É•¹‘•É}±¥Ù•}…É•„€ôÍĞ¹™É…µ•¹Ğ¡ÉÕ¹}•Ù•ÉäôÈ¤¡}É•¹‘•É}±¥Ù•}…É•…}‰½‘ä¤)•±Í”è(€€€É•¹‘•É}±¥Ù•}…É•„€ô}É•¹‘•É}±¥Ù•}…É•…}‰½‘ä(()‘•˜}±…Ñ•ÍÑ}É•Á½ÉÑ}½¹Ñ•áĞ ¤€´ø‘¥ÑmÍÑÈ°¹åtğ9½¹”è(€€€½ÕÑ}‘¥É}Ñ•áĞ€ôÍĞ¹Í•ÍÍ¥½¹}ÍÑ…Ñ”¹•Ğ ‰±…ÍÑ}™¥¹¥Í¡•‘}½ÕÑ}‘¥Èˆ¤(€€€¥˜¹½Ğ½ÕÑ}‘¥É}Ñ•áĞè(€€€€€€€É•ÑÕÉ¸9½¹”(€€€É•Á½ÉÑ}Á…Ñ €ôA…Ñ ¡½ÕÑ}‘¥É}Ñ•áĞ¤€¼€‰É•Á½ÉĞ¹©Í½¸ˆ(€€€‘…Ñ„€ô±½…‘}©Í½¸¡É•Á½ÉÑ}Á…Ñ ¤(€€€¥˜¹½Ğ‘…Ñ„è(€€€€€€€É•ÑÕÉ¸9½¹”(€€€…ÑÑ•µÁÑÌ€ô‘…Ñ„¹•Ğ ‰…ÑÑ•µÁÑÌˆ°mt¤(€€€±…ÍÑ}…ÑÑ•µÁĞ€ô…ÑÑ•µÁÑÍl´Åt¥˜…ÑÑ•µÁÑÌ•±Í”íô(€€€É•ÑÕÉ¸ì(€€€€€€€€‰…Í•}Á…Ñ ˆè‘…Ñ„¹•Ğ ‰…Í•}Á…Ñ ˆ¤°(€€€€€€€€‰•¹¥¹••É¥¹}™•…Í¥‰±”ˆè‘…Ñ„¹•Ğ ‰ÍÕ•ÍÌˆ¤°(€€€€€€€€‰Í½±Ù•É}½¹Ù•É•ˆè‘…Ñ„¹•Ğ ‰Í½±Ù•É}½¹Ù•É•ˆ°±…ÍÑ}…ÑÑ•µÁĞ¹•Ğ ‰ÍÕ•ÍÌˆ¤¤°(€€€€€€€€‰…ÑÑ•µÁÑ}½Õ¹Ğˆè±•¸¡…ÑÑ•µÁÑÌ¤°(€€€€€€€€‰±…ÍÑ}…ÑÑ•µÁĞˆèì(€€€€€€€€€€€€‰¹…µ”ˆè±…ÍÑ}…ÑÑ•µÁĞ¹•Ğ ‰¹…µ”ˆ¤°(€€€€€€€€€€€€‰ÍÕ•ÍÌˆè±…ÍÑ}…ÑÑ•µÁĞ¹•Ğ ‰ÍÕ•ÍÌˆ¤°(€€€€€€€€€€€€‰™•…Í¥‰±”ˆè±…ÍÑ}…ÑÑ•µÁĞ¹•Ğ ‰™•…Í¥‰±”ˆ¤°(€€€€€€€€€€€€‰•ÉÉ½Èˆè±…ÍÑ}…ÑÑ•µÁĞ¹•Ğ ‰•ÉÉ½Èˆ¤°(€€€€€€€€€€€€‰Ù¥½±…Ñ¥½¹Ìˆè±…ÍÑ}…ÑÑ•µÁĞ¹•Ğ ‰Ù¥½±…Ñ¥½¹Ìˆ°mt¥lèÈÁt°(€€€€€€€€€€€€‰Å}±¥µ¥Ñ}•Ù•¹ÑÌˆè±…ÍÑ}…ÑÑ•µÁĞ¹•Ğ ‰Å}±¥µ¥Ñ}•Ù•¹ÑÌˆ°mt¥lèÈÁt°(€€€€€€€ô°(€€€€€€€€‰É•Á…¥ÉÌˆè‘…Ñ„¹•Ğ ‰É•Á…¥ÉÌˆ°mt¥lèÈÁt°(€€€ô(()‘•˜}¹•İ}¡…Ñ}½¹Ù•ÉÍ…Ñ¥½¸ ¤€´ø‘¥ÑmÍÑÈ°¹åtè(€€€¹½Ü€ô‘…Ñ•Ñ¥µ”¹¹½Ü ¤¹¥Í½™½Éµ…Ğ¡Ñ¥µ•ÍÁ•Œô‰Í•½¹‘Ìˆ¤(€€€É•ÑÕÉ¸ì(€€€€€€€€‰¥ˆèÕÕ¥Ğ ¤¹¡•à°(€€€€€€€€‰Ñ¥Ñ±”ˆè€‹šZÃ–¾ç¢¾tˆ°(€€€€€€€€‰É•…Ñ•‘}…Ğˆè¹½Ü°(€€€€€€€€‰ÕÁ‘…Ñ•‘}…Ğˆè¹½Ü°(€€€€€€€€‰µ•ÍÍ…•Ìˆèmt°(€€€ô(()‘•˜±½…‘}¡…Ñ}¡¥ÍÑ½Éä ¤€´ø‘¥ÑmÍÑÈ°¹åtè(€€€‘…Ñ„€ô±½…‘}©Í½¸¡!Q}!%MQ=Ie}AQ ¤(€€€¥˜¹½Ğ¥Í¥¹ÍÑ…¹”¡‘…Ñ„°‘¥Ğ¤½È¹½Ğ¥Í¥¹ÍÑ…¹”¡‘…Ñ„¹•Ğ ‰½¹Ù•ÉÍ…Ñ¥½¹Ìˆ¤°±¥ÍĞ¤è(€€€€€€€É•ÑÕÉ¸ì‰Ù•ÉÍ¥½¸ˆè€Ä°€‰½¹Ù•ÉÍ…Ñ¥½¹Ìˆèmuô((€€€½¹Ù•ÉÍ…Ñ¥½¹Ì€ômt(€€€™½È¥Ñ•´¥¸‘…Ñ…l‰½¹Ù•ÉÍ…Ñ¥½¹Ì‰tè(€€€€€€€¥˜¹½Ğ¥Í¥¹ÍÑ…¹”¡¥Ñ•´°‘¥Ğ¤½È¹½Ğ¥Ñ•´¹•Ğ ‰¥ˆ¤½È¹½Ğ¥Í¥¹ÍÑ…¹”¡¥Ñ•´¹•Ğ ‰µ•ÍÍ…•Ìˆ¤°±¥ÍĞ¤è(€€€€€€€€€€€½¹Ñ¥¹Õ”(€€€€€€€½¹Ù•ÉÍ…Ñ¥½¹Ì¹…ÁÁ•¹¡¥Ñ•´¤(€€€É•ÑÕÉ¸ì‰Ù•ÉÍ¥½¸ˆè€Ä°€‰½¹Ù•ÉÍ…Ñ¥½¹Ìˆè½¹Ù•ÉÍ…Ñ¥½¹Íô(()‘•˜Í…Ù•}¡…Ñ}¡¥ÍÑ½Éä¡¡¥ÍÑ½Éäè‘¥ÑmÍÑÈ°¹åt¤€´ø9½¹”è(€€€IU9M}%H¹µ­‘¥È¡Á…É•¹ÑÌõQÉÕ”°•á¥ÍÑ}½¬õQÉÕ”¤(€€€Ñ•µÁ}Á…Ñ €ô!Q}!%MQ=Ie}AQ ¹İ¥Ñ¡}ÍÕ™™¥à ˆ¹ÑµÀˆ¤(€€€Ñ•µÁ}Á…Ñ ¹İÉ¥Ñ•}Ñ•áĞ (€€€€€€€©Í½¸¹‘ÕµÁÌ¡¡¥ÍÑ½Éä°•¹ÍÕÉ•}…Í¥¤õ…±Í”°¥¹‘•¹ĞôÈ°‘•™…Õ±ĞõÍÑÈ¤°(€€€€€€€•¹½‘¥¹œô‰ÕÑ˜´àˆ°(€€€€¤(€€€Ñ•µÁ}Á…Ñ ¹É•Á±…”¡!Q}!%MQ=Ie}AQ ¤(()‘•˜}¡…Ñ}Ñ¥Ñ±”¡ÁÉ½µÁĞèÍÑÈ¤€´øÍÑÈè(€€€Ñ¥Ñ±”€ô€ˆ€ˆ¹©½¥¸¡ÁÉ½µÁĞ¹ÍÁ±¥Ğ ¤¤(€€€É•ÑÕÉ¸Ñ¥Ñ±”¥˜±•¸¡Ñ¥Ñ±”¤€ğô€ÈĞ•±Í”Ñ¥Ñ±•lèÈÑt€¬€‹Š˜ˆ(()‘•˜}¡…Ñ}½ÁÑ¥½¹}±…‰•°¡½¹Ù•ÉÍ…Ñ¥½¸è‘¥ÑmÍÑÈ°¹åt¤€´øÍÑÈè(€€€ÕÁ‘…Ñ•‘}…Ğ€ôÍÑÈ¡½¹Ù•ÉÍ…Ñ¥½¸¹•Ğ ‰ÕÁ‘…Ñ•‘}…Ğˆ°€ˆˆ¤¤¹É•Á±…” ‰Pˆ°€ˆ€ˆ¤(€€€É•ÑÕÉ¸˜‰í½¹Ù•ÉÍ…Ñ¥½¸¹•Ğ Ñ¥Ñ±”œ¤½È€ŸšZÃ–¾ç¢¾t÷íÕÁ‘…Ñ•‘}…ÑlèÄÙuôˆ(()‘•˜É•¹‘•É}¡…Ğ¡½¹ÑÉ½±Ìè‘¥ÑmÍÑÈ°¹åt¤€´ø9½¹”è(€€€ÍĞ¹ÍÕ‰¡•…‘•È ‹šö»šÖšfë¢÷¦^»¶Pˆ¤(€€€ÍĞ¹…ÁÑ¥½¸ ‹–>¿¢¾‹¦^»šö»šÖ¢º‡º_–:Bº_’ú/šVÃš6»šRÛšVo¦^»¦Šc¾ò3’î—–>+šr¢şG’âš²‡¢º‡º_îOšzs–:–>Ë–¾ç¢¾w’òk¢«–*£’şw–¶c–r£šr³šrëˆ¤(€€€¡¥ÍÑ½Éä€ô±½…‘}¡…Ñ}¡¥ÍÑ½Éä ¤(€€€¥˜¹½Ğ¡¥ÍÑ½Éål‰½¹Ù•ÉÍ…Ñ¥½¹Ì‰tè(€€€€€€€¡¥ÍÑ½Éål‰½¹Ù•ÉÍ…Ñ¥½¹Ì‰t¹…ÁÁ•¹¡}¹•İ}¡…Ñ}½¹Ù•ÉÍ…Ñ¥½¸ ¤¤(€€€€€€€Í…Ù•}¡…Ñ}¡¥ÍÑ½Éä¡¡¥ÍÑ½Éä¤((€€€½¹Ù•ÉÍ…Ñ¥½¹Í}‰å}¥€ôí¥Ñ•µl‰¥‰tè¥Ñ•´™½È¥Ñ•´¥¸¡¥ÍÑ½Éål‰½¹Ù•ÉÍ…Ñ¥½¹Ì‰uô(€€€É•ÅÕ•ÍÑ•‘}¥€ôÍĞ¹Í•ÍÍ¥½¹}ÍÑ…Ñ”¹•Ğ ‰¡…Ñ}½¹Ù•ÉÍ…Ñ¥½¹}Í•±•Ñ½Èˆ¤(€€€ÕÉÉ•¹Ñ}¥€ôÉ•ÅÕ•ÍÑ•‘}¥¥˜É•ÅÕ•ÍÑ•‘}¥¥¸½¹Ù•ÉÍ…Ñ¥½¹Í}‰å}¥•±Í”ÍĞ¹Í•ÍÍ¥½¹}ÍÑ…Ñ”¹•Ğ ‰ÕÉÉ•¹Ñ}¡…Ñ}¥ˆ¤(€€€¥˜ÕÉÉ•¹Ñ}¥¹½Ğ¥¸½¹Ù•ÉÍ…Ñ¥½¹Í}‰å}¥è(€€€€€€€ÕÉÉ•¹Ñ}¥€ôµ…à¡¡¥ÍÑ½Éål‰½¹Ù•ÉÍ…Ñ¥½¹Ì‰t°­•äõ±…µ‰‘„¥Ñ•´è¥Ñ•´¹•Ğ ‰ÕÁ‘…Ñ•‘}…Ğˆ°€ˆˆ¤¥l‰¥‰t(€€€ÍĞ¹Í•ÍÍ¥½¹}ÍÑ…Ñ”¹ÕÉÉ•¹Ñ}¡…Ñ}¥€ôÕÉÉ•¹Ñ}¥(€€€½¹Ù•ÉÍ…Ñ¥½¸€ô½¹Ù•ÉÍ…Ñ¥½¹Í}‰å}¥‘mÕÉÉ•¹Ñ}¥‘t(€€€µ•ÍÍ…•Ì€ô½¹Ù•ÉÍ…Ñ¥½¹l‰µ•ÍÍ…•Ì‰t((€€€½¹™¥œ€ô115½¹™¥œ¹™É½µ}•¹Ø (€€€€€€€ÁÉ½Ù¥‘•Èõ½¹ÑÉ½±Íl‰±±µ}ÁÉ½Ù¥‘•È‰t°(€€€€€€€µ½‘•°õ½¹ÑÉ½±Íl‰±±µ}µ½‘•°‰t½È9½¹”°(€€€€€€€‰…Í•}ÕÉ°õ½¹ÑÉ½±Íl‰±±µ}‰…Í•}ÕÉ°‰t½È9½¹”°(€€€€€€€…Á¥}­•äõ½¹ÑÉ½±Íl‰±±µ}…Á¥}­•ä‰t½È9½¹”°(€€€€¤((€€€¥˜½¹ÑÉ½±Íl‰±±µ}ÁÉ½Ù¥‘•È‰t€ôô€‰½™˜ˆè(€€€€€€€ÍĞ¹¥¹™¼ ‹¢¾ß–r£–Ş›’úŸŠs–’Ÿš¢‡–z/Šw’â·¦'š.¤••ÁM••¬ƒš"X-¥µ§ˆ¤(€€€•±¥˜¹½Ğ½¹™¥œ¹•¹…‰±•è(€€€€€€€•¹Ù}¹…µ”€ô€‰AM-}A%}-dˆ¥˜½¹ÑÉ½±Íl‰±±µ}ÁÉ½Ù¥‘•È‰t€ôô€‰‘••ÁÍ••¬ˆ•±Í”€‰-%5%}A%}-dˆ(€€€€€€€ÍĞ¹İ…É¹¥¹œ¡˜‹šr«ššÖ/–"Ãš¢‡–z/–¾¦J—¾ò3¢¾ß–#¢ºûö»Îïî:¿–Š–>c¦<í•¹Ù}¹…µ•÷ˆ¤(€€€•±Í”è(€€€€€€€ÍĞ¹…ÁÑ¥½¸¡˜‹–öO–&7š¢‡–z/¾òií½¹™¥œ¹µ½‘•±ôƒ
-Üí½¹ÑÉ½±Íl±±µ}ÁÉ½Ù¥‘•Èuôˆ¤((€€€µ•ÍÍ…•Í}İ¥¹‘½Ü€ôÍĞ¹½¹Ñ…¥¹•È¡¡•¥¡ĞôÔÀÀ°‰½É‘•ÈõQÉÕ”¤(€€€İ¥Ñ µ•ÍÍ…•Í}İ¥¹‘½Üè(€€€€€€€¥˜¹½Ğµ•ÍÍ…•Ìè(€€€€€€€€€€€İ¥Ñ ÍĞ¹¡…Ñ}µ•ÍÍ…” ‰…ÍÍ¥ÍÑ…¹Ğˆ¤è(€€€€€€€€€€€€€€€ÍĞ¹µ…É­‘½İ¸ ‹’öƒ––÷¾ò3š"Gšb¿šö»šÖ¢º‡º_šfë¢÷’öO’öƒ–>¿’î—nÓš:—š>?¢şÃ¦^»¦Šc¾ò3’ú/–š¾òh¨«’âë’î’æ AXƒ¢*
-ç’òk¢ö³š"@ADƒ¢*
-ç¾ò|¨¨ˆ¤(€€€€€€€•±Í”è(€€€€€€€€€€€™½Èµ•ÍÍ…”¥¸µ•ÍÍ…•Ìè(€€€€€€€€€€€€€€€İ¥Ñ ÍĞ¹¡…Ñ}µ•ÍÍ…”¡µ•ÍÍ…•l‰É½±”‰t¤è(€€€€€€€€€€€€€€€€€€€ÍĞ¹µ…É­‘½İ¸¡µ•ÍÍ…•l‰½¹Ñ•¹Ğ‰t¤((€€€ÁÉ½µÁĞ€ôÍĞ¹¡…Ñ}¥¹ÁÕĞ ‹¢úO–—’öƒj¦^»¦Šc¾ò3’ú/–š¾òk–"šzCšr¢şG’âš²‡šö»šÖ¢º‡º_’âë’î’æ#šÊ‡šr'šRÛšVlˆ¤((€€€¡¥ÍÑ½Éå}½°°¹•İ}½°°‘•±•Ñ•}½°€ôÍĞ¹½±Õµ¹Ì¡lĞ°€Ä°€Åt¤(€€€İ¥Ñ ¹•İ}½°è(€€€€€€€¥˜ÍĞ¹‰ÕÑÑ½¸ ‹šZÃ–îë–¾ç¢¾tˆ°İ¥‘Ñ ô‰ÍÑÉ•Ñ ˆ¤è(€€€€€€€€€€€¹•İ}½¹Ù•ÉÍ…Ñ¥½¸€ô}¹•İ}¡…Ñ}½¹Ù•ÉÍ…Ñ¥½¸ ¤(€€€€€€€€€€€¡¥ÍÑ½Éål‰½¹Ù•ÉÍ…Ñ¥½¹Ì‰t¹…ÁÁ•¹¡¹•İ}½¹Ù•ÉÍ…Ñ¥½¸¤(€€€€€€€€€€€Í…Ù•}¡…Ñ}¡¥ÍÑ½Éä¡¡¥ÍÑ½Éä¤(€€€€€€€€€€€ÍĞ¹Í•ÍÍ¥½¹}ÍÑ…Ñ”¹ÕÉÉ•¹Ñ}¡…Ñ}¥€ô¹•İ}½¹Ù•ÉÍ…Ñ¥½¹l‰¥‰t(€€€€€€€€€€€ÍĞ¹Í•ÍÍ¥½¹}ÍÑ…Ñ”¹¡…Ñ}½¹Ù•ÉÍ…Ñ¥½¹}Í•±•Ñ½È€ô¹•İ}½¹Ù•ÉÍ…Ñ¥½¹l‰¥‰t(€€€€€€€€€€€ÍĞ¹É•ÉÕ¸ ¤(€€€İ¥Ñ ‘•±•Ñ•}½°è(€€€€€€€İ¥Ñ ÍĞ¹Á½Á½Ù•È ‹–"ƒ¦f“–¾ç¢¾tˆ°İ¥‘Ñ ô‰ÍÑÉ•Ñ ˆ¤è(€€€€€€€€€€€ÍĞ¹İ…É¹¥¹œ ‹–"ƒ¦f“–B;š^ƒšÎWš‹–’7¾ò3†»–ºk–"ƒ¦f“–öO–&7–¾ç¢¾w–B_¾ò|ˆ¤(€€€€€€€€€€€¥˜ÍĞ¹‰ÕÑÑ½¸ ‹†»¢º“–"ƒ¦fˆ°ÑåÁ”ô‰ÁÉ¥µ…Éäˆ°İ¥‘Ñ ô‰ÍÑÉ•Ñ ˆ¤è(€€€€€€€€€€€€€€€¡¥ÍÑ½Éål‰½¹Ù•ÉÍ…Ñ¥½¹Ì‰t€ôl(€€€€€€€€€€€€€€€€€€€¥Ñ•´™½È¥Ñ•´¥¸¡¥ÍÑ½Éål‰½¹Ù•ÉÍ…Ñ¥½¹Ì‰t¥˜¥Ñ•µl‰¥‰t€„ôÕÉÉ•¹Ñ}¥(€€€€€€€€€€€€€€€t(€€€€€€€€€€€€€€€¥˜¹½Ğ¡¥ÍÑ½Éål‰½¹Ù•ÉÍ…Ñ¥½¹Ì‰tè(€€€€€€€€€€€€€€€€€€€¡¥ÍÑ½Éål‰½¹Ù•ÉÍ…Ñ¥½¹Ì‰t¹…ÁÁ•¹¡}¹•İ}¡…Ñ}½¹Ù•ÉÍ…Ñ¥½¸ ¤¤(€€€€€€€€€€€€€€€¹•áÑ}½¹Ù•ÉÍ…Ñ¥½¸€ôµ…à (€€€€€€€€€€€€€€€€€€€¡¥ÍÑ½Éål‰½¹Ù•ÉÍ…Ñ¥½¹Ì‰t°(€€€€€€€€€€€€€€€€€€€­•äõ±…µ‰‘„¥Ñ•´è¥Ñ•´¹•Ğ ‰ÕÁ‘…Ñ•‘}…Ğˆ°€ˆˆ¤°(€€€€€€€€€€€€€€€€¤(€€€€€€€€€€€€€€€Í…Ù•}¡…Ñ}¡¥ÍÑ½Éä¡¡¥ÍÑ½Éä¤(€€€€€€€€€€€€€€€ÍĞ¹Í•ÍÍ¥½¹}ÍÑ…Ñ”¹ÕÉÉ•¹Ñ}¡…Ñ}¥€ô¹•áÑ}½¹Ù•ÉÍ…Ñ¥½¹l‰¥‰t(€€€€€€€€€€€€€€€ÍĞ¹Í•ÍÍ¥½¹}ÍÑ…Ñ”¹¡…Ñ}½¹Ù•ÉÍ…Ñ¥½¹}Í•±•Ñ½È€ô¹•áÑ}½¹Ù•ÉÍ…Ñ¥½¹l‰¥‰t(€€€€€€€€€€€€€€€ÍĞ¹É•ÉÕ¸ ¤(€€€İ¥Ñ ¡¥ÍÑ½Éå}½°è(€€€€€€€Í½ÉÑ•‘}½¹Ù•ÉÍ…Ñ¥½¹Ì€ôÍ½ÉÑ• (€€€€€€€€€€€¡¥ÍÑ½Éål‰½¹Ù•ÉÍ…Ñ¥½¹Ì‰t°(€€€€€€€€€€€­•äõ±…µ‰‘„¥Ñ•´è¥Ñ•´¹•Ğ ‰ÕÁ‘…Ñ•‘}…Ğˆ°€ˆˆ¤°(€€€€€€€€€€€É•Ù•ÉÍ”õQÉÕ”°(€€€€€€€€¤(€€€€€€€½ÁÑ¥½¹}¥‘Ì€ôm¥Ñ•µl‰¥‰t™½È¥Ñ•´¥¸Í½ÉÑ•‘}½¹Ù•ÉÍ…Ñ¥½¹Ít(€€€€€€€½ÁÑ¥½¹}±½½­ÕÀ€ôí¥Ñ•µl‰¥‰tè¥Ñ•´™½È¥Ñ•´¥¸Í½ÉÑ•‘}½¹Ù•ÉÍ…Ñ¥½¹Íô(€€€€€€€Í•±•Ñ•‘}¥¹‘•à€ô½ÁÑ¥½¹}¥‘Ì¹¥¹‘•à¡ÕÉÉ•¹Ñ}¥¤¥˜ÕÉÉ•¹Ñ}¥¥¸½ÁÑ¥½¹}¥‘Ì•±Í”€À(€€€€€€€ÍĞ¹Í•±•Ñ‰½à (€€€€€€€€€€€€‹–:–>Ë–¾ç¢¾tˆ°(€€€€€€€€€€€½ÁÑ¥½¹}¥‘Ì°(€€€€€€€€€€€¥¹‘•àõÍ•±•Ñ•‘}¥¹‘•à°(€€€€€€€€€€€™½Éµ…Ñ}™Õ¹Œõ±…µ‰‘„¥Ñ•µ}¥è}¡…Ñ}½ÁÑ¥½¹}±…‰•°¡½ÁÑ¥½¹}±½½­ÕÁm¥Ñ•µ}¥‘t¤°(€€€€€€€€€€€­•äô‰¡…Ñ}½¹Ù•ÉÍ…Ñ¥½¹}Í•±•Ñ½Èˆ°(€€€€€€€€¤((€€€¥˜¹½ĞÁÉ½µÁĞè(€€€€€€€É•ÑÕÉ¸((€€€µ•ÍÍ…•Ì¹…ÁÁ•¹¡ì‰É½±”ˆè€‰ÕÍ•Èˆ°€‰½¹Ñ•¹ĞˆèÁÉ½µÁÑô¤(€€€¥˜½¹Ù•ÉÍ…Ñ¥½¸¹•Ğ ‰Ñ¥Ñ±”ˆ¤€ôô€‹šZÃ–¾ç¢¾tˆè(€€€€€€€½¹Ù•ÉÍ…Ñ¥½¹l‰Ñ¥Ñ±”‰t€ô}¡…Ñ}Ñ¥Ñ±”¡ÁÉ½µÁĞ¤(€€€½¹Ù•ÉÍ…Ñ¥½¹l‰ÕÁ‘…Ñ•‘}…Ğ‰t€ô‘…Ñ•Ñ¥µ”¹¹½Ü ¤¹¥Í½™½Éµ…Ğ¡Ñ¥µ•ÍÁ•Œô‰Í•½¹‘Ìˆ¤(€€€Í…Ù•}¡…Ñ}¡¥ÍÑ½Éä¡¡¥ÍÑ½Éä¤(€€€İ¥Ñ µ•ÍÍ…•Í}İ¥¹‘½Üè(€€€€€€€İ¥Ñ ÍĞ¹¡…Ñ}µ•ÍÍ…” ‰ÕÍ•Èˆ¤è(€€€€€€€€€€€ÍĞ¹µ…É­‘½İ¸¡ÁÉ½µÁĞ¤((€€€¥˜¹½Ğ½¹™¥œ¹•¹…‰±•è(€€€€€€€…¹Íİ•È€ô€‹–Âkšr«¦7ö»–>¿R£j–’Ÿš¢‡–z/¢¾ß¦'š.§’úo–êS–V¾ò3–æÛ¢ºûö»nã–êSjA$-•äƒÎïî:¿–Š–>c¦?ˆ(€€€•±Í”è(€€€€€€€ÍåÍÑ•µ}ÁÉ½µÁĞ€ô€ (€€€€€€€€€€€€‹’öƒšb¿R×–*oÎïîšö»šÖ¢º‡º_šfë¢÷’öO¾ò3’æšb¿¢C–ş’â—¢Â£j’â·šZš*šr¿–*§š&/ˆ(€€€€€€€€€€€€‹’òc–#–n{¶Sšö»šÖ¢º‡º_5QA=]KAeA=]KšRÛšVo¢¾+šZ·¢şC¢†3ê›šv–J3º_’ú/šVÃš6»¦^»¦Šcˆ(€€€€€€€€€€€€‹–n{¶S–êS–#îgîO¢ºë¾ò3–7¢¦+’úwš6»¾òo’â7†»–ºkš^Ûšb;†»¢¾Óšb;¾ò3’â7–ú_ò[¦ƒ¢º‡º_îOšzsˆ(€€€€€€€€€€€€‹¢.—š>C’úo’êšr¢şG’âš²‡¢º‡º_îOšzs’â+’â/šZ¾ò3–êS–òWR£–Û’â·j–ß’öO’ê/–º{–n{¶Sˆ(€€€€€€€€¤(€€€€€€€É•Á½ÉÑ}½¹Ñ•áĞ€ô}±…Ñ•ÍÑ}É•Á½ÉÑ}½¹Ñ•áĞ ¤(€€€€€€€¥˜É•Á½ÉÑ}½¹Ñ•áĞè(€€€€€€€€€€€ÍåÍÑ•µ}ÁÉ½µÁĞ€¬ô€‰q»šr¢şG’âš²‡šö»šÖ¢º‡º_îOšzs’â+’â/šZ¾òiq¸ˆ€¬©Í½¸¹‘ÕµÁÌ (€€€€€€€€€€€€€€€É•Á½ÉÑ}½¹Ñ•áĞ°(€€€€€€€€€€€€€€€•¹ÍÕÉ•}…Í¥¤õ…±Í”°(€€€€€€€€€€€€€€€‘•™…Õ±ĞõÍÑÈ°(€€€€€€€€€€€€¤(€€€€€€€İ¥Ñ µ•ÍÍ…•Í}İ¥¹‘½Üè(€€€€€€€€€€€İ¥Ñ ÍĞ¹¡…Ñ}µ•ÍÍ…” ‰…ÍÍ¥ÍÑ…¹Ğˆ¤è(€€€€€€€€€€€€€€€İ¥Ñ ÍĞ¹ÍÁ¥¹¹•È ‹š¶–r£šw¢¸¸¸ˆ¤è(€€€€€€€€€€€€€€€€€€€É•ÍÕ±Ğ€ô115±¥•¹Ğ¡½¹™¥œ¤¹¡…Ñ}Ñ•áĞ (€€€€€€€€€€€€€€€€€€€€€€€µ•ÍÍ…•Íl´ÈÀét°(€€€€€€€€€€€€€€€€€€€€€€€ÍåÍÑ•µ}ÁÉ½µÁĞõÍåÍÑ•µ}ÁÉ½µÁĞ°(€€€€€€€€€€€€€€€€€€€€¤(€€€€€€€€€€€€€€€€€€€¥˜É•ÍÕ±Ğ¹•Ğ ‰•ÉÉ½Èˆ¤è(€€€€€€€€€€€€€€€€€€€€€€€…¹Íİ•È€ô˜‹š¢‡–z/¢ÂR£–’Ç¢Ò—¾òiíÉ•ÍÕ±Ñl•ÉÉ½Èuôˆ(€€€€€€€€€€€€€€€€€€€•±Í”è(€€€€€€€€€€€€€€€€€€€€€€€…¹Íİ•È€ôÍÑÈ¡É•ÍÕ±Ğ¹•Ğ ‰½¹Ñ•¹Ğˆ¤½È€‹š¢‡–z/šÊ‡šr'¢şS–n{šr'šV#––ºç¾ò3¢¾ß¢7–B;¦7¢¾Wˆ¤(€€€€€€€€€€€€€€€€€€€ÍĞ¹µ…É­‘½İ¸¡…¹Íİ•È¤(€€€€€€€µ•ÍÍ…•Ì¹…ÁÁ•¹¡ì‰É½±”ˆè€‰…ÍÍ¥ÍÑ…¹Ğˆ°€‰½¹Ñ•¹Ğˆè…¹Íİ•Éô¤(€€€€€€€½¹Ù•ÉÍ…Ñ¥½¹l‰ÕÁ‘…Ñ•‘}…Ğ‰t€ô‘…Ñ•Ñ¥µ”¹¹½Ü ¤¹¥Í½™½Éµ…Ğ¡Ñ¥µ•ÍÁ•Œô‰Í•½¹‘Ìˆ¤(€€€€€€€Í…Ù•}¡…Ñ}¡¥ÍÑ½Éä¡¡¥ÍÑ½Éä¤(€€€€€€€É•ÑÕÉ¸((€€€İ¥Ñ µ•ÍÍ…•Í}İ¥¹‘½Üè(€€€€€€€İ¥Ñ ÍĞ¹¡…Ñ}µ•ÍÍ…” ‰…ÍÍ¥ÍÑ…¹Ğˆ¤è(€€€€€€€€€€€ÍĞ¹İ…É¹¥¹œ¡…¹Íİ•È¤(€€€µ•ÍÍ…•Ì¹…ÁÁ•¹¡ì‰É½±”ˆè€‰…ÍÍ¥ÍÑ…¹Ğˆ°€‰½¹Ñ•¹Ğˆè…¹Íİ•Éô¤(€€€½¹Ù•ÉÍ…Ñ¥½¹l‰ÕÁ‘…Ñ•‘}…Ğ‰t€ô‘…Ñ•Ñ¥µ”¹¹½Ü ¤¹¥Í½™½Éµ…Ğ¡Ñ¥µ•ÍÁ•Œô‰Í•½¹‘Ìˆ¤(€€€Í…Ù•}¡…Ñ}¡¥ÍÑ½Éä¡¡¥ÍÑ½Éä¤(()‘•˜µ…¥¸ ¤€´ø9½¹”è(€€€¥¹©•Ñ}ÍÌ ¤(€€€•¹ÍÕÉ•}©½‰}ÍÑ…Ñ” ¤(€€€É•¹‘•É}¡•…‘•È ¤(€€€½¹ÑÉ½±Ì€ôÉÕ¹}½¹ÑÉ½±Ì ¤((€€€¡…Ñ}Ñ…ˆ°…±Õ±…Ñ¥½¹}Ñ…ˆ€ôÍĞ¹Ñ…‰Ì¡l‹šfë¢÷¦^»¶Pˆ°€‹šö»šÖ¢º‡º_’â;îOšzp‰t¤(€€€İ¥Ñ ¡…Ñ}Ñ…ˆè(€€€€€€€É•¹‘•É}¡…Ğ¡½¹ÑÉ½±Ì¤((€€€İ¥Ñ …±Õ±…Ñ¥½¹}Ñ…ˆè(€€€€€€€¥˜½¹ÑÉ½±Íl‰•¹¥¹”‰t€ôô€‰µ…ÑÁ½İ•Èˆ…¹¹½ĞA…Ñ ¡U1Q}5QA=]I}AQ ¤¹•á¥ÍÑÌ ¤è(€€€€€€€€€€€ÍĞ¹•ÉÉ½È¡˜‰5QA=]K¦îc¢º“¢Ş¿–ú’â7–¶c–r£¾òiíU1Q}5QA=]I}AQ!ôˆ¤(€€€€€€€•±Í”è(€€€€€€€€€€€¥˜½¹ÑÉ½±Íl‰ÉÕ¹}±¥­•‰tè(€€€€€€€€€€€€€€€¥˜½¹ÑÉ½±Íl‰…Í•}Á…Ñ ‰t¥Ì9½¹”è(€€€€€€€€€€€€€€€€€€€ÍĞ¹İ…É¹¥¹œ ‹¢¾ß–#¦'š.§š"[’â+’òƒ’â’â«º_’ú/šZ’îÛˆ¤(€€€€€€€€€€€€€€€•±¥˜¹½ĞA…Ñ ¡½¹ÑÉ½±Íl‰…Í•}Á…Ñ ‰t¤¹•á¥ÍÑÌ ¤è(€€€€€€€€€€€€€€€€€€€ÍĞ¹•ÉÉ½È¡˜‹º_’ú/šZ’îÛ’â7–¶c–r£¾òií½¹ÑÉ½±Íl…Í•}Á…Ñ uôˆ¤(€€€€€€€€€€€€€€€•±Í”è(€€€€€€€€€€€€€€€€€€€ÍÑ…ÉÑ}‰…­É½Õ¹‘}©½ˆ¡½¹ÑÉ½±Ì¤(€€€€€€€€€€€€€€€€€€€ÍĞ¹ÍÕ•ÍÌ ‹¢º‡º_’îï–*‡–ŞË–B¿–*£–>¿’î—
-ç–ïŠs–"ßšZÃ¢º‡º_*ÛšŠwš~—r/¢şo–ê›¾ò3š"[
-ç–ïŠs–>[šÚ#¢º‡º_Šwî#š¶‹ˆ¤(€€€€€€€€€€€€€€€€€€€ÍĞ¹É•ÉÕ¸ ¤((€€€€€€€€€€€É•¹‘•É}±¥Ù•}…É•„ ¤(€€€€€€€€€€€¥˜¹½ĞÍĞ¹Í•ÍÍ¥½¹}ÍÑ…Ñ”¹•Ğ ‰ÉÕ¹¹¥¹}©½ˆˆ¤…¹¹½ĞÍĞ¹Í•ÍÍ¥½¹}ÍÑ…Ñ”¹•Ğ ‰±…ÍÑ}™¥¹¥Í¡•‘}½ÕÑ}‘¥Èˆ¤è(€€€€€€€€€€€€€€€¥¹™½}Á…¹•° (€€€€€€€€€€€€€€€€€€€€‹¢¾ß¢úO–—šö»šÖ¢º‡º_š†#’ú,ˆ°(€€€€€€€€€€€€€€€€€€€€‹¢¾ß–r£–Ş›’úŸ¦'š.§º_’ú/šv—šêC–në–ºkšÆ¢–f£–J3–’Ÿš¢‡–z/¢ºûö»¾ò3Û–B;
-ç–ïŠs–ò–/¢şC¢†3šö»šÖšfë¢÷’öOŠwˆ°(€€€€€€€€€€€€€€€€€€€mt°(€€€€€€€€€€€€€€€€¤(€€€€€€€€€€€ÍĞ¹‘¥Ù¥‘•È ¤(€€€€€€€€€€€É•¹‘•É}¡¥ÍÑ½Éå}µ…¹…•È ¤(()¥˜}}¹…µ•}|€ôô€‰}}µ…¥¹}|ˆè(€€€µ…¥¸ ¤(
+            {
+                "æ˜¾ç¤ºåç§°": f"{run_dir.name} | {'å¯è¡Œ' if data.get('success') else 'æœªå®Œå…¨å¯è¡Œ'}",
+                "ç›®å½•å": run_dir.name,
+                "è¾“å‡ºç›®å½•": str(run_dir),
+                "æŠ¥å‘ŠJSON": str(report_path),
+                "ç®—ä¾‹": Path(str(data.get("case_path", ""))).name,
+                "å·¥ç¨‹å¯è¡Œ": bool(data.get("success")),
+                "æ”¶æ•›": bool(data.get("solver_converged", last_attempt.get("success"))),
+                "å°è¯•æ¬¡æ•°": len(attempts),
+                "è¿è¡Œæ—¶é—´": f"{run_time.year}å¹´{run_time.month}æœˆ{run_time.day}æ—¥ {run_time:%H:%M}",
+                "æœ€åä¿®æ”¹æ—¶é—´": run_dir.stat().st_mtime,
+            }
+        )
+    return sorted(records, key=lambda item: item["æœ€åä¿®æ”¹æ—¶é—´"], reverse=True)
+
+
+def delete_history_record(record: dict[str, Any]) -> None:
+    path = Path(record["è¾“å‡ºç›®å½•"]).resolve()
+    runs_root = RUNS_DIR.resolve()
+    if runs_root not in path.parents:
+        raise ValueError("æ‹’ç»åˆ é™¤ runs ç›®å½•ä¹‹å¤–çš„æ–‡ä»¶å¤¹ã€‚")
+    if path == runs_root or path.name.startswith("_"):
+        raise ValueError("æ‹’ç»åˆ é™¤ç³»ç»Ÿç›®å½•ã€‚")
+    shutil.rmtree(path)
+
+
+def compact_text(value: Any, limit: int = 220) -> str:
+    if value is None:
+        return ""
+    if isinstance(value, (dict, list)):
+        text = json.dumps(value, ensure_ascii=False)
+    else:
+        text = str(value)
+    text = " ".join(text.split())
+    return text if len(text) <= limit else text[:limit] + "..."
+
+
+def render_result_summary(data: dict[str, Any]) -> None:
+    attempts = data.get("attempts", [])
+    repairs = data.get("repairs", [])
+    last_attempt = attempts[-1] if attempts else {}
+    q_events = sum(len(item.get("q_limit_events", [])) for item in attempts)
+
+    c1, c2, c3, c4 = st.columns(4)
+    with c1:
+        metric("å·¥ç¨‹å¯è¡Œ", "æ˜¯" if data.get("success") else "å¦", "æ”¶æ•›ä¸”æ— å·¥ç¨‹çº¦æŸè¶Šé™", "green" if data.get("success") else "orange")
+    with c2:
+        converged = data.get("solver_converged", last_attempt.get("success"))
+        metric("æ±‚è§£å™¨æ”¶æ•›", "æ˜¯" if converged else "å¦", f"æœ€åä¸€æ¬¡å°è¯•ï¼š{last_attempt.get('name', '-')}")
+    with c3:
+        metric("è®¡ç®—å°è¯•æ¬¡æ•°", str(len(attempts)), "è‡ªåŠ¨ä¿®å¤è¿‡ç¨‹ä¼šä¿ç•™æ¯æ¬¡å°è¯•")
+    with c4:
+        metric("ä¿®å¤åŠ¨ä½œ / Qäº‹ä»¶", f"{len(repairs)} / {q_events}", "è®°å½•PVâ†’PQã€ç®—æ³•åˆ‡æ¢ã€è´Ÿè·ç¼©æ”¾ç­‰", "orange")
+
+
+def render_llm_stage(stage_key: str, payload: Any) -> None:
+    label = LLM_STAGE_LABELS.get(stage_key, stage_key)
+    if not isinstance(payload, dict):
+        info_panel(label, compact_text(payload), [("åŸå§‹æ–‡æœ¬", "warn")])
+        return
+
+    enabled = bool(payload.get("enabled"))
+    error = payload.get("error")
+    parsed = payload.get("parsed")
+    content = payload.get("content")
+    message = payload.get("message")
+
+    if error:
+        status = [("è°ƒç”¨å¤±è´¥", "bad")]
+        body = compact_text(error, 420)
+    elif not enabled:
+        status = [("è§„åˆ™æ¨¡å¼", "warn")]
+        body = compact_text(message or "æœªå¯ç”¨å¤§æ¨¡å‹ï¼Œç³»ç»Ÿä½¿ç”¨è§„åˆ™è¯Šæ–­ã€‚", 420)
+    elif parsed:
+        status = [("å·²è°ƒç”¨LLM", "ok"), ("ç»“æ„åŒ–è§£ææˆåŠŸ", "ok")]
+        body = "å¤§æ¨¡å‹è¿”å›äº†å¯è§£æçš„ç»“æ„åŒ–ç»“æœï¼Œä¸‹é¢æŒ‰å­—æ®µå±•å¼€å±•ç¤ºã€‚"
+    else:
+        status = [("å·²è°ƒç”¨LLM", "ok"), ("ä»…åŸæ–‡è¾“å‡º", "warn")]
+        body = compact_text(content or message or "LLMå·²è¿”å›ç»“æœã€‚", 420)
+
+    info_panel(label, body, status)
+    if isinstance(parsed, dict):
+        render_parsed_llm(parsed)
+    elif parsed:
+        st.write(parsed)
+
+    if content:
+        with st.expander(f"{label}ï¼šæŸ¥çœ‹LLMåŸæ–‡", expanded=False):
+            st.markdown(str(content))
+
+
+def render_parsed_llm(parsed: dict[str, Any]) -> None:
+    summary_items = []
+    table_items = []
+    other_items = {}
+    for key, value in parsed.items():
+        if isinstance(value, list):
+            if value and all(isinstance(item, dict) for item in value):
+                table_items.append((key, value))
+            else:
+                summary_items.append({"å­—æ®µ": key, "å†…å®¹": "ï¼›".join(map(str, value[:8]))})
+        elif isinstance(value, dict):
+            other_items[key] = value
+        else:
+            summary_items.append({"å­—æ®µ": key, "å†…å®¹": compact_text(value, 260)})
+
+    if summary_items:
+        st.markdown("##### å…³é”®ç»“è®º")
+        dataframe_from(summary_items)
+    for key, value in table_items:
+        st.markdown(f"##### {key}")
+        dataframe_from(value)
+    for key, value in other_items.items():
+        with st.expander(f"æŸ¥çœ‹ {key} è¯¦æƒ…", expanded=False):
+            st.json(value)
+
+
+def render_llm_view(data: dict[str, Any]) -> None:
+    sections = data.get("llm_sections") or {}
+    if not sections:
+        st.info("æœ¬æ¬¡è¿è¡Œæ²¡æœ‰LLMè¯Šæ–­è®°å½•ã€‚")
+        return
+
+    rows = []
+    for key, payload in sections.items():
+        if isinstance(payload, dict):
+            if payload.get("error"):
+                status = "å¤±è´¥"
+            elif payload.get("enabled") is False:
+                status = "è§„åˆ™æ¨¡å¼"
+            elif payload.get("parsed"):
+                status = "å·²è§£æ"
+            else:
+                status = "å·²è¿”å›åŸæ–‡"
+            brief = payload.get("message") or payload.get("error") or compact_text(payload.get("parsed") or payload.get("content"), 120)
+        else:
+            status = "æ–‡æœ¬"
+            brief = compact_text(payload, 120)
+        rows.append({"é˜¶æ®µ": LLM_STAGE_LABELS.get(key, key), "çŠ¶æ€": status, "æ‘˜è¦": brief})
+
+    st.markdown("#### LLMè¯Šæ–­æ€»è§ˆ")
+    dataframe_from(rows)
+    st.markdown("#### åˆ†é˜¶æ®µæŸ¥çœ‹")
+    for key, payload in sections.items():
+        render_llm_stage(key, payload)
+
+
+def split_markdown_sections(markdown_text: str) -> list[tuple[str, str]]:
+    sections: list[tuple[str, str]] = []
+    current_title = "æŠ¥å‘Šå¼€å¤´"
+    current_lines: list[str] = []
+    for line in markdown_text.splitlines():
+        if line.startswith("#"):
+            if current_lines:
+                sections.append((current_title, "\n".join(current_lines).strip()))
+            current_title = line.lstrip("#").strip() or "æœªå‘½åç« èŠ‚"
+            current_lines = [line]
+        else:
+            current_lines.append(line)
+    if current_lines:
+        sections.append((current_title, "\n".join(current_lines).strip()))
+    return [(title, body) for title, body in sections if body]
+
+
+def render_report_preview(data: dict[str, Any]) -> None:
+    report_path = Path(data["final_report_path"]) if data.get("final_report_path") else None
+    json_path = Path(data["final_json_path"]) if data.get("final_json_path") else None
+    case_path = Path(data["final_case_path"]) if data.get("final_case_path") else None
+    attempts = data.get("attempts", [])
+    last_attempt = attempts[-1] if attempts else {}
+    converged = data.get("solver_converged", last_attempt.get("success"))
+
+    info_panel(
+        "æŠ¥å‘Šé˜…è¯»æ‘˜è¦",
+        "è¿™é‡Œå…ˆå±•ç¤ºæœ€ç»ˆç»“è®ºå’Œè¾“å‡ºæ–‡ä»¶ï¼Œå®Œæ•´æŠ¥å‘ŠæŒ‰ç« èŠ‚æŠ˜å åœ¨ä¸‹æ–¹ï¼Œä¾¿äºç­”è¾©æˆ–æ£€æŸ¥æ—¶å¿«é€Ÿå®šä½ã€‚",
+        [
+            ("å·¥ç¨‹å¯è¡Œ" if data.get("success") else "æœªå®Œå…¨å¯è¡Œ", "ok" if data.get("success") else "warn"),
+            ("æ±‚è§£å™¨æ”¶æ•›" if converged else "æ±‚è§£å™¨æœªæ”¶æ•›", "ok" if converged else "bad"),
+        ],
+    )
+
+    files = []
+    for label, path in [("MarkdownæŠ¥å‘Š", report_path), ("JSONç»“æ„åŒ–ç»“æœ", json_path), ("æœ€ç»ˆ/æœ€åç®—ä¾‹", case_path)]:
+        if path:
+            files.append({"æ–‡ä»¶ç±»å‹": label, "è·¯å¾„": str(path), "æ˜¯å¦å­˜åœ¨": path.exists()})
+    dataframe_from(files)
+
+    c1, c2, c3 = st.columns(3)
+    for col, label, path in [(c1, "ä¸‹è½½MarkdownæŠ¥å‘Š", report_path), (c2, "ä¸‹è½½JSONç»“æœ", json_path), (c3, "ä¸‹è½½æœ€ç»ˆç®—ä¾‹", case_path)]:
+        with col:
+            if path and path.exists():
+                st.download_button(label, data=path.read_bytes(), file_name=path.name, use_container_width=True)
+
+    if not report_path or not report_path.exists():
+        st.info("æš‚æ— MarkdownæŠ¥å‘Šæ–‡ä»¶ã€‚")
+        return
+
+    markdown_text = load_file_text(report_path)
+    st.markdown("#### æŠ¥å‘Šåˆ†æ®µé¢„è§ˆ")
+    for index, (title, body) in enumerate(split_markdown_sections(markdown_text), start=1):
+        with st.expander(f"{index}. {title}", expanded=index <= 2):
+            st.markdown(body)
+    with st.expander("æŸ¥çœ‹å®Œæ•´MarkdownåŸæ–‡", expanded=False):
+        st.code(markdown_text, language="markdown")
+
+
+def render_report_data(data: dict[str, Any]) -> None:
+    render_result_summary(data)
+    tab1, tab2, tab3, tab4, tab5 = st.tabs(["è®¡ç®—å°è¯•", "æ•°æ®æ£€æŸ¥", "ä¿®å¤åŠ¨ä½œ", "LLMè¯Šæ–­", "æŠ¥å‘Šä¸æ–‡ä»¶"])
+    with tab1:
+        rows = []
+        for attempt in data.get("attempts", []):
+            rows.append(
+                {
+                    "å°è¯•åç§°": attempt.get("name"),
+                    "æ±‚è§£å™¨": attempt.get("engine"),
+                    "ç®—æ³•": (attempt.get("options") or {}).get("pf_alg_name"),
+                    "æ”¶æ•›": attempt.get("success"),
+                    "å·¥ç¨‹å¯è¡Œ": attempt.get("feasible"),
+                    "è€—æ—¶/s": attempt.get("elapsed_s"),
+                    "è¶Šé™æ•°": len(attempt.get("violations", [])),
+                    "Qé™é¢äº‹ä»¶": len(attempt.get("q_limit_events", [])),
+                    "é”™è¯¯": attempt.get("error") or "",
+                }
+            )
+        dataframe_from(rows)
+    with tab2:
+        dataframe_from(data.get("validation", []))
+    with tab3:
+        dataframe_from(data.get("repairs", []))
+    with tab4:
+        render_llm_view(data)
+    with tab5:
+        render_report_preview(data)
+
+
+def render_history_manager() -> None:
+    title_col, refresh_col = st.columns([5, 1])
+    with title_col:
+        st.markdown("### å†å²è®¡ç®—è®°å½•")
+    with refresh_col:
+        if st.button("åˆ·æ–°å†å²è®°å½•", use_container_width=True):
+            st.rerun()
+    records = load_history_records()
+    if not records:
+        st.info("æš‚æ— å†å²è®°å½•ã€‚è¿è¡Œä¸€æ¬¡è®¡ç®—åï¼Œè¿™é‡Œä¼šè‡ªåŠ¨å‡ºç°è®°å½•ã€‚")
+        return
+
+    st.session_state.setdefault("history_editor_version", 0)
+
+    table_rows = [
+        {
+            "è®°å½•ID": item["ç›®å½•å"],
+            "é€‰æ‹©": False,
+            "ç®—ä¾‹": item["ç®—ä¾‹"],
+            "å·¥ç¨‹å¯è¡Œ": item["å·¥ç¨‹å¯è¡Œ"],
+            "æ”¶æ•›": item["æ”¶æ•›"],
+            "å°è¯•æ¬¡æ•°": item["å°è¯•æ¬¡æ•°"],
+            "è¿è¡Œæ—¶é—´": item["è¿è¡Œæ—¶é—´"],
+        }
+        for item in records
+    ]
+    editor_key = f"history_record_selector_{st.session_state.history_editor_version}"
+    edited_rows = st.data_editor(
+        pd.DataFrame(table_rows),
+        use_container_width=True,
+        disabled=["ç®—ä¾‹", "å·¥ç¨‹å¯è¡Œ", "æ”¶æ•›", "å°è¯•æ¬¡æ•°", "è¿è¡Œæ—¶é—´"],
+        column_config={
+            "è®°å½•ID": None,
+            "é€‰æ‹©": st.column_config.CheckboxColumn(
+                "é€‰æ‹©",
+                help="å‹¾é€‰ä¸€æ¡æˆ–å¤šæ¡å†å²è®°å½•åï¼Œå¯ä»¥æ‰¹é‡åˆ é™¤ã€‚",
+                width="small",
+                alignment="center",
+                default=False,
+            ),
+            "è¿è¡Œæ—¶é—´": st.column_config.TextColumn(
+                "è¿è¡Œæ—¶é—´",
+                width="medium",
+                alignment="center",
+            ),
+        },
+        key=editor_key,
+    )
+    selected_dirs = set(
+        edited_rows.loc[edited_rows["é€‰æ‹©"].astype(bool), "è®°å½•ID"].astype(str).tolist()
+        if "è®°å½•ID" in edited_rows.columns
+        else []
+    )
+    selected_records = [item for item in records if item["ç›®å½•å"] in selected_dirs]
+
+    selected_label = st.selectbox("é€‰æ‹©è¦æŸ¥çœ‹çš„å†å²è®°å½•", [item["æ˜¾ç¤ºåç§°"] for item in records])
+    selected = next(item for item in records if item["æ˜¾ç¤ºåç§°"] == selected_label)
+    c1, c2 = st.columns([1, 1])
+    with c1:
+        open_clicked = st.button("æ‰“å¼€è¯¥å†å²è®°å½•", use_container_width=True)
+    with c2:
+        delete_clicked = st.button(
+            f"åˆ é™¤é€‰ä¸­å†å²è®°å½•ï¼ˆ{len(selected_records)}ï¼‰",
+            disabled=not selected_records,
+            use_container_width=True,
+        )
+
+    if delete_clicked:
+        failed: list[str] = []
+        for record in selected_records:
+            try:
+                delete_history_record(record)
+            except Exception as exc:
+                failed.append(f"{record['ç›®å½•å']}ï¼š{type(exc).__name__}: {exc}")
+        if failed:
+            st.error("éƒ¨åˆ†å†å²è®°å½•åˆ é™¤å¤±è´¥ï¼š\n" + "\n".join(failed))
+        else:
+            st.session_state.history_editor_version += 1
+            st.success(f"å·²åˆ é™¤ {len(selected_records)} æ¡å†å²è®°å½•ã€‚")
+            st.rerun()
+
+    if open_clicked:
+        data = load_json(Path(selected["æŠ¥å‘ŠJSON"]))
+        if data:
+            st.markdown(f"#### æ­£åœ¨æŸ¥çœ‹ï¼š{selected['ç›®å½•å']}")
+            render_report_data(data)
+        else:
+            st.error("æ— æ³•è¯»å–è¯¥å†å²è®°å½•çš„ report.jsonã€‚")
+
+
+def _render_recent_result_if_available() -> None:
+    finished_dir = Path(st.session_state.last_finished_out_dir) if st.session_state.get("last_finished_out_dir") else None
+    if finished_dir and (finished_dir / "report.json").exists():
+        data = load_json(finished_dir / "report.json")
+        if data:
+            st.markdown("### æœ€è¿‘ä¸€æ¬¡è®¡ç®—ç»“æœ")
+            render_report_data(data)
+
+
+def _render_live_area_body() -> None:
+    render_job_control()
+    _render_recent_result_if_available()
+
+
+if hasattr(st, "fragment"):
+    render_live_area = st.fragment(run_every=2)(_render_live_area_body)
+else:
+    render_live_area = _render_live_area_body
+
+
+def _latest_report_context() -> dict[str, Any] | None:
+    out_dir_text = st.session_state.get("last_finished_out_dir")
+    if not out_dir_text:
+        return None
+    report_path = Path(out_dir_text) / "report.json"
+    data = load_json(report_path)
+    if not data:
+        return None
+    attempts = data.get("attempts", [])
+    last_attempt = attempts[-1] if attempts else {}
+    return {
+        "case_path": data.get("case_path"),
+        "engineering_feasible": data.get("success"),
+        "solver_converged": data.get("solver_converged", last_attempt.get("success")),
+        "attempt_count": len(attempts),
+        "last_attempt": {
+            "name": last_attempt.get("name"),
+            "success": last_attempt.get("success"),
+            "feasible": last_attempt.get("feasible"),
+            "error": last_attempt.get("error"),
+            "violations": last_attempt.get("violations", [])[:20],
+            "q_limit_events": last_attempt.get("q_limit_events", [])[:20],
+        },
+        "repairs": data.get("repairs", [])[:20],
+    }
+
+
+def _new_chat_conversation() -> dict[str, Any]:
+    now = datetime.now().isoformat(timespec="seconds")
+    return {
+        "id": uuid4().hex,
+        "title": "æ–°å¯¹è¯",
+        "created_at": now,
+        "updated_at": now,
+        "messages": [],
+    }
+
+
+def load_chat_history() -> dict[str, Any]:
+    data = load_json(CHAT_HISTORY_PATH)
+    if not isinstance(data, dict) or not isinstance(data.get("conversations"), list):
+        return {"version": 1, "conversations": []}
+
+    conversations = []
+    for item in data["conversations"]:
+        if not isinstance(item, dict) or not item.get("id") or not isinstance(item.get("messages"), list):
+            continue
+        conversations.append(item)
+    return {"version": 1, "conversations": conversations}
+
+
+def save_chat_history(history: dict[str, Any]) -> None:
+    RUNS_DIR.mkdir(parents=True, exist_ok=True)
+    temp_path = CHAT_HISTORY_PATH.with_suffix(".tmp")
+    temp_path.write_text(
+        json.dumps(history, ensure_ascii=False, indent=2, default=str),
+        encoding="utf-8",
+    )
+    temp_path.replace(CHAT_HISTORY_PATH)
+
+
+def _chat_title(prompt: str) -> str:
+    title = " ".join(prompt.split())
+    return title if len(title) <= 24 else title[:24] + "â€¦"
+
+
+def _chat_option_label(conversation: dict[str, Any]) -> str:
+    updated_at = str(conversation.get("updated_at", "")).replace("T", " ")
+    return f"{conversation.get('title') or 'æ–°å¯¹è¯'}ã€€{updated_at[:16]}"
+
+
+def render_chat(controls: dict[str, Any]) -> None:
+    st.subheader("æ½®æµæ™ºèƒ½é—®ç­”")
+    st.caption("å¯è¯¢é—®æ½®æµè®¡ç®—åŸç†ã€ç®—ä¾‹æ•°æ®ã€æ”¶æ•›é—®é¢˜ï¼Œä»¥åŠæœ€è¿‘ä¸€æ¬¡è®¡ç®—ç»“æœã€‚å†å²å¯¹è¯ä¼šè‡ªåŠ¨ä¿å­˜åœ¨æœ¬æœºã€‚")
+    history = load_chat_history()
+    if not history["conversations"]:
+        history["conversations"].append(_new_chat_conversation())
+        save_chat_history(history)
+
+    conversations_by_id = {item["id"]: item for item in history["conversations"]}
+    requested_id = st.session_state.get("chat_conversation_selector")
+    current_id = requested_id if requested_id in conversations_by_id else st.session_state.get("current_chat_id")
+    if current_id not in conversations_by_id:
+        current_id = max(history["conversations"], key=lambda item: item.get("updated_at", ""))["id"]
+    st.session_state.current_chat_id = current_id
+    conversation = conversations_by_id[current_id]
+    messages = conversation["messages"]
+
+    config = LLMConfig.from_env(
+        provider=controls["llm_provider"],
+        model=controls["llm_model"] or None,
+        base_url=controls["llm_base_url"] or None,
+        api_key=controls["llm_api_key"] or None,
+    )
+
+    if controls["llm_provider"] == "off":
+        st.info("è¯·åœ¨å·¦ä¾§â€œå¤§æ¨¡å‹â€ä¸­é€‰æ‹© DeepSeek æˆ– Kimiã€‚")
+    elif not config.enabled:
+        env_name = "DEEPSEEK_API_KEY" if controls["llm_provider"] == "deepseek" else "KIMI_API_KEY"
+        st.warning(f"æœªæ£€æµ‹åˆ°æ¨¡å‹å¯†é’¥ï¼Œè¯·å…ˆè®¾ç½®ç³»ç»Ÿç¯å¢ƒå˜é‡ {env_name}ã€‚")
+    else:
+        st.caption(f"å½“å‰æ¨¡å‹ï¼š{config.model} Â· {controls['llm_provider']}")
+
+    messages_window = st.container(height=500, border=True)
+    with messages_window:
+        if not messages:
+            with st.chat_message("assistant"):
+                st.markdown("ä½ å¥½ï¼Œæˆ‘æ˜¯æ½®æµè®¡ç®—æ™ºèƒ½ä½“ã€‚ä½ å¯ä»¥ç›´æ¥æè¿°é—®é¢˜ï¼Œä¾‹å¦‚ï¼š**ä¸ºä»€ä¹ˆ PV èŠ‚ç‚¹ä¼šè½¬æˆ PQ èŠ‚ç‚¹ï¼Ÿ**")
+        else:
+            for message in messages:
+                with st.chat_message(message["role"]):
+                    st.markdown(message["content"])
+
+    prompt = st.chat_input("è¾“å…¥ä½ çš„é—®é¢˜ï¼Œä¾‹å¦‚ï¼šåˆ†ææœ€è¿‘ä¸€æ¬¡æ½®æµè®¡ç®—ä¸ºä»€ä¹ˆæ²¡æœ‰æ”¶æ•›")
+
+    history_col, new_col, delete_col = st.columns([4, 1, 1])
+    with new_col:
+        if st.button("æ–°å»ºå¯¹è¯", width="stretch"):
+            new_conversation = _new_chat_conversation()
+            history["conversations"].append(new_conversation)
+            save_chat_history(history)
+            st.session_state.current_chat_id = new_conversation["id"]
+            st.session_state.chat_conversation_selector = new_conversation["id"]
+            st.rerun()
+    with delete_col:
+        with st.popover("åˆ é™¤å¯¹è¯", width="stretch"):
+            st.warning("åˆ é™¤åæ— æ³•æ¢å¤ï¼Œç¡®å®šåˆ é™¤å½“å‰å¯¹è¯å—ï¼Ÿ")
+            if st.button("ç¡®è®¤åˆ é™¤", type="primary", width="stretch"):
+                history["conversations"] = [
+                    item for item in history["conversations"] if item["id"] != current_id
+                ]
+                if not history["conversations"]:
+                    history["conversations"].append(_new_chat_conversation())
+                next_conversation = max(
+                    history["conversations"],
+                    key=lambda item: item.get("updated_at", ""),
+                )
+                save_chat_history(history)
+                st.session_state.current_chat_id = next_conversation["id"]
+                st.session_state.chat_conversation_selector = next_conversation["id"]
+                st.rerun()
+    with history_col:
+        sorted_conversations = sorted(
+            history["conversations"],
+            key=lambda item: item.get("updated_at", ""),
+            reverse=True,
+        )
+        option_ids = [item["id"] for item in sorted_conversations]
+        option_lookup = {item["id"]: item for item in sorted_conversations}
+        selected_index = option_ids.index(current_id) if current_id in option_ids else 0
+        st.selectbox(
+            "å†å²å¯¹è¯",
+            option_ids,
+            index=selected_index,
+            format_func=lambda item_id: _chat_option_label(option_lookup[item_id]),
+            key="chat_conversation_selector",
+        )
+
+    if not prompt:
+        return
+
+    messages.append({"role": "user", "content": prompt})
+    if conversation.get("title") == "æ–°å¯¹è¯":
+        conversation["title"] = _chat_title(prompt)
+    conversation["updated_at"] = datetime.now().isoformat(timespec="seconds")
+    save_chat_history(history)
+    with messages_window:
+        with st.chat_message("user"):
+            st.markdown(prompt)
+
+    if not config.enabled:
+        answer = "å°šæœªé…ç½®å¯ç”¨çš„å¤§æ¨¡å‹ã€‚è¯·é€‰æ‹©ä¾›åº”å•†ï¼Œå¹¶è®¾ç½®ç›¸åº”çš„ API Key ç³»ç»Ÿç¯å¢ƒå˜é‡ã€‚"
+    else:
+        system_prompt = (
+            "ä½ æ˜¯ç”µåŠ›ç³»ç»Ÿæ½®æµè®¡ç®—æ™ºèƒ½ä½“ï¼Œä¹Ÿæ˜¯è€å¿ƒã€ä¸¥è°¨çš„ä¸­æ–‡æŠ€æœ¯åŠ©æ‰‹ã€‚"
+            "ä¼˜å…ˆå›ç­”æ½®æµè®¡ç®—ã€MATPOWERã€PYPOWERã€æ”¶æ•›è¯Šæ–­ã€è¿è¡Œçº¦æŸå’Œç®—ä¾‹æ•°æ®é—®é¢˜ã€‚"
+            "å›ç­”åº”å…ˆç»™ç»“è®ºï¼Œå†è§£é‡Šä¾æ®ï¼›ä¸ç¡®å®šæ—¶æ˜ç¡®è¯´æ˜ï¼Œä¸å¾—ç¼–é€ è®¡ç®—ç»“æœã€‚"
+            "è‹¥æä¾›äº†æœ€è¿‘ä¸€æ¬¡è®¡ç®—ç»“æœä¸Šä¸‹æ–‡ï¼Œåº”å¼•ç”¨å…¶ä¸­çš„å…·ä½“äº‹å®å›ç­”ã€‚"
+        )
+        report_context = _latest_report_context()
+        if report_context:
+            system_prompt += "\næœ€è¿‘ä¸€æ¬¡æ½®æµè®¡ç®—ç»“æœä¸Šä¸‹æ–‡ï¼š\n" + json.dumps(
+                report_context,
+                ensure_ascii=False,
+                default=str,
+            )
+        with messages_window:
+            with st.chat_message("assistant"):
+                with st.spinner("æ­£åœ¨æ€è€ƒ..."):
+                    result = LLMClient(config).chat_text(
+                        messages[-20:],
+                        system_prompt=system_prompt,
+                    )
+                    if result.get("error"):
+                        answer = f"æ¨¡å‹è°ƒç”¨å¤±è´¥ï¼š{result['error']}"
+                    else:
+                        answer = str(result.get("content") or "æ¨¡å‹æ²¡æœ‰è¿”å›æœ‰æ•ˆå†…å®¹ï¼Œè¯·ç¨åé‡è¯•ã€‚")
+                    st.markdown(answer)
+        messages.append({"role": "assistant", "content": answer})
+        conversation["updated_at"] = datetime.now().isoformat(timespec="seconds")
+        save_chat_history(history)
+        return
+
+    with messages_window:
+        with st.chat_message("assistant"):
+            st.warning(answer)
+    messages.append({"role": "assistant", "content": answer})
+    conversation["updated_at"] = datetime.now().isoformat(timespec="seconds")
+    save_chat_history(history)
+
+
+def main() -> None:
+    inject_css()
+    ensure_job_state()
+    render_header()
+    controls = run_controls()
+
+    chat_tab, calculation_tab = st.tabs(["æ™ºèƒ½é—®ç­”", "æ½®æµè®¡ç®—ä¸ç»“æœ"])
+    with chat_tab:
+        render_chat(controls)
+
+    with calculation_tab:
+        if controls["engine"] == "matpower" and not Path(DEFAULT_MATPOWER_PATH).exists():
+            st.error(f"MATPOWERé»˜è®¤è·¯å¾„ä¸å­˜åœ¨ï¼š{DEFAULT_MATPOWER_PATH}")
+        else:
+            if controls["run_clicked"]:
+                if controls["case_path"] is None:
+                    st.warning("è¯·å…ˆé€‰æ‹©æˆ–ä¸Šä¼ ä¸€ä¸ªç®—ä¾‹æ–‡ä»¶ã€‚")
+                elif not Path(controls["case_path"]).exists():
+                    st.error(f"ç®—ä¾‹æ–‡ä»¶ä¸å­˜åœ¨ï¼š{controls['case_path']}")
+                else:
+                    start_background_job(controls)
+                    st.success("è®¡ç®—ä»»åŠ¡å·²å¯åŠ¨ã€‚å¯ä»¥ç‚¹å‡»â€œåˆ·æ–°è®¡ç®—çŠ¶æ€â€æŸ¥çœ‹è¿›åº¦ï¼Œæˆ–ç‚¹å‡»â€œå–æ¶ˆè®¡ç®—â€ç»ˆæ­¢ã€‚")
+                    st.rerun()
+
+            render_live_area()
+            if not st.session_state.get("running_job") and not st.session_state.get("last_finished_out_dir"):
+                info_panel(
+                    "è¯·è¾“å…¥æ½®æµè®¡ç®—æ¡ˆä¾‹",
+                    "è¯·åœ¨å·¦ä¾§é€‰æ‹©ç®—ä¾‹æ¥æºã€å›ºå®šæ±‚è§£å™¨å’Œå¤§æ¨¡å‹è®¾ç½®ï¼Œç„¶åç‚¹å‡»â€œå¼€å§‹è¿è¡Œæ½®æµæ™ºèƒ½ä½“â€ã€‚",
+                    [],
+                )
+            st.divider()
+            render_history_manager()
+
+
+if __name__ == "__main__":
+    main()
