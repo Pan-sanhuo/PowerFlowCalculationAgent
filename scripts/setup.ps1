@@ -11,6 +11,7 @@ Write-Host "正在安装经过验证的依赖版本..."
 & $venvPython -m pip install --upgrade pip
 & $venvPython -m pip install -r (Join-Path $root "requirements.txt")
 & $venvPython -m pip install pytest
+& $venvPython -m pip install -e $root
 
 Write-Host "正在检查环境..."
 & $venvPython -m pfagent doctor

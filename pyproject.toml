@@ -23,4 +23,7 @@ dev = [
 pfagent = "pfagent.cli:main"
 
 [tool.setuptools]
-packages = ["pfagent"]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

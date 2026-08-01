@@ -12,7 +12,7 @@
       "label": "2. 运行完整演示",
       "type": "shell",
       "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
-      "args": ["${workspaceFolder}\\demo_vscode.py"],
+      "args": ["${workspaceFolder}\\examples\\demo_vscode.py"],
       "options": {
         "env": {"PYTHONUTF8": "1"}
       },

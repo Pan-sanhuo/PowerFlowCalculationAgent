@@ -1,190 +1,69 @@
-# 电力系统潮流计算智能体（PYPOWER + DeepSeek/Kimi + Streamlit）
+# 电力系统潮流计算智能体
 
-这是一个带有人机交互界面的潮流计算智能体。程序以 PYPOWER 为确定性计算核心，以 Streamlit 提供图形化交互界面，完成：
+一个面向学习、演示和数据诊断的电力系统潮流计算项目。它以 PYPOWER 为数值求解核心，提供规则化的数据检查、自动修复、大模型辅助诊断，以及 Streamlit 人机交互界面。
 
-1. 读取 MATPOWER/PYPOWER 风格数据并执行潮流计算；
-2. 检查原始数据、节点类型、孤岛、机组限额、支路参数和工程约束；
-3. 识别 PV/REF 发电机无功越限，并按 Q 限额执行 PV→PQ 处理；
-4. 对不收敛或不可行算例尝试平坦启动、算法切换、机组再调度和基准负荷搜索；
-5. 可选调用 DeepSeek、Kimi 或其他 OpenAI-compatible 模型分析数据、过程和结果；
-6. 生成 Markdown 报告、JSON 报告和可复算的 Python 算例；
-7. 通过 Web 界面完成算例选择、参数配置、运行控制、过程查看与结果展示。
+## 项目能力
+
+- 执行 MATPOWER / PYPOWER 风格算例的交流潮流计算；
+- 检查节点类型、孤岛、机组无功限额、支路参数和工程约束；
+- 对不可行算例尝试平坦启动、算法切换、机组再调度与负荷搜索；
+- 支持 DeepSeek、Kimi 等 OpenAI-compatible 模型生成诊断与修复建议；
+- 通过 Streamlit 页面配置算例、查看计算过程、历史记录和报告。
 
 ## 二次开发说明
 
-本项目是基于原有命令行版潮流计算智能体进行的**二次开发**，二次开发及维护者为 [Pan-sanhuo](https://github.com/Pan-sanhuo)。
+本仓库是在原有命令行版潮流计算智能体基础上的二次开发，维护者为 [Pan-sanhuo](https://github.com/Pan-sanhuo)。本次开发增加了 Streamlit 人机交互界面、运行记录管理、可视化参数配置与 Windows 一键启动脚本。
 
-本次二次开发主要增加和优化了：
+原始项目及第三方依赖的版权仍归各自作者所有，并遵循其原有许可证；本仓库未附带独立许可证时，不代表自动授予额外的复制、分发或商业使用权。
 
-- 基于 Streamlit 的人机交互界面；
-- 对话式操作区域与持久化交互体验；
-- 算例、求解器和大模型参数的可视化配置；
-- 计算过程、诊断信息和结果报告的页面展示；
-- Windows 一键安装和一键启动脚本。
-
-原始项目及第三方依赖的版权仍归各自作者所有，并遵循其原有许可证。本仓库未附带独立许可证时，不代表自动授予额外的复制、分发或商业使用权。
-
-## 一、图形界面快速开始
-
-### 1. 安装环境
-
-双击：
+## 目录结构
 
 ```text
-一键安装环境.bat
+.
+├─ src/pfagent/          # 核心智能体包：求解、诊断、修复、报告、LLM 接口
+├─ apps/streamlit/       # Streamlit 人机交互界面
+├─ examples/             # 可运行的潮流算例和完整演示入口
+├─ tests/                # 自动测试
+├─ scripts/              # 环境安装脚本与 Windows 启动脚本
+├─ docs/                 # 演示步骤、任务说明和修改说明
+├─ .streamlit/           # Streamlit 配置
+├─ pyproject.toml        # Python 打包与命令行入口配置
+├─ requirements.txt      # 核心依赖
+└─ requirements-ui.txt   # 图形界面依赖
 ```
 
-随后安装图形界面依赖：
+## 快速开始
 
-```text
-安装图形界面依赖.bat
-```
+### Windows 图形界面
 
-### 2. 启动人机交互界面
+1. 进入 `scripts/windows/`，双击 `一键安装环境.bat`。
+2. 双击 `安装图形界面依赖.bat`。
+3. 双击 `启动潮流智能体界面.bat`。
 
-双击：
+启动后浏览器通常会打开 `http://localhost:8501`。
 
-```text
-启动潮流智能体界面.bat
-```
-
-也可以在 PowerShell 中运行：
-
-```powershell
-.\.venv\Scripts\python.exe -m streamlit run web_ui.py
-```
-
-浏览器通常会自动打开 `http://localhost:8501`。
-
-## 二、VS Code 一键运行
-
-### 1. 准备软件
-
-- Python 3.10～3.12
-- VS Code
-- VS Code 的 Microsoft Python 扩展
-
-### 2. 打开项目
-
-在 VS Code 中选择“文件 → 打开文件夹”，打开本项目根目录。
-
-### 3. 安装环境
-
-按 `Ctrl+Shift+P`，选择 `Tasks: Run Task`，运行：
-
-```text
-1. 安装运行环境
-```
-
-脚本会创建 `.venv` 并安装与 PYPOWER 兼容的 NumPy/SciPy 版本。
-
-### 4. 运行演示
-
-再次选择 `Tasks: Run Task`，运行：
-
-```text
-2. 运行完整演示
-```
-
-也可以按 `F5`，选择：
-
-```text
-运行潮流智能体完整演示
-```
-
-演示结果位于 `runs` 目录。
-
-## 三、手动命令
+### 命令行与测试
 
 ```powershell
 .\.venv\Scripts\python.exe -m pfagent doctor
 .\.venv\Scripts\python.exe -m pytest -q
 .\.venv\Scripts\python.exe -m pfagent inspect .\examples\case3_bad_data.py
 .\.venv\Scripts\python.exe -m pfagent run .\examples\case9_demo.py --engine pypower
-.\.venv\Scripts\python.exe -m pfagent run .\examples\case3_q_limit.py --engine pypower --max-rounds 20
 ```
 
-## 四、演示算例
+完整演示入口位于 `examples/demo_vscode.py`。
 
-- `case9_demo.py`：标准 IEEE 9 节点算例，展示正常潮流。
-- `case3_repairable.py`：缺少 REF 且初值异常，展示数据检查和修复。
-- `case3_q_limit.py`：PV 节点 Q 上限很紧，展示 Q 越限、PV→PQ 和可行方案搜索。
-- `case3_bad_data.py`：包含多种错误且物理能力不足，展示“数据修复后仍可能无解”。
+## 算例
 
-## 五、DeepSeek
+- `case9_demo.py`：标准 IEEE 9 节点潮流；
+- `case3_repairable.py`：缺少 REF 节点且初值异常的可修复算例；
+- `case3_q_limit.py`：PV 节点无功越限与 PV→PQ 切换；
+- `case3_bad_data.py`：包含多种数据错误的诊断算例。
 
-API Key 不要写入代码。在 VS Code PowerShell 终端中设置：
+## 安全提示
 
-```powershell
-$env:DEEPSEEK_API_KEY="你的API Key"
-```
+- 不要提交 `.env`、真实 API Key、`.venv/`、`runs/` 或缓存文件；
+- DeepSeek / Kimi 密钥应通过环境变量或界面会话临时输入；
+- 只有数值收敛且满足工程约束的结果才会被标记为可行方案。
 
-然后运行：
-
-```powershell
-.\.venv\Scripts\python.exe -m pfagent run .\examples\case3_q_limit.py `
-  --engine pypower `
-  --llm-provider deepseek `
-  --max-rounds 20 `
-  --out .\runs\deepseek_q_limit
-```
-
-## 六、Kimi
-
-```powershell
-$env:KIMI_API_KEY="你的API Key"
-.\.venv\Scripts\python.exe -m pfagent run .\examples\case3_q_limit.py `
-  --engine pypower `
-  --llm-provider kimi `
-  --max-rounds 20 `
-  --out .\runs\kimi_q_limit
-```
-
-如果服务商更新了模型名称，可增加：
-
-```text
---llm-model 当前可用模型名
-```
-
-## 七、代码结构
-
-```text
-demo_vscode.py          VS Code 完整演示入口
-web_ui.py               Streamlit 人机交互界面
-examples/               潮流算例
-pfagent/agent.py        智能体闭环控制
-pfagent/caseio.py       数据读取与导出
-pfagent/validators.py   数据和工程约束检查
-pfagent/solvers.py      PYPOWER/MATPOWER 求解器与雅可比诊断
-pfagent/repairs.py      自动修复动作
-pfagent/llm.py          DeepSeek/Kimi 接口
-pfagent/reporting.py    Markdown/JSON 报告
-tests/                  自动测试
-.vscode/                VS Code 任务和调试配置
-.streamlit/             Streamlit 配置
-```
-
-## 八、结果状态
-
-程序严格区分：
-
-- `success=True`：求解器收敛，且没有电压、线路或阻断性 Q 越限；
-- `solver_converged=True`：潮流方程数值收敛，但不一定工程可行。
-
-只有工程可行时才输出：
-
-```text
-final_feasible_case.py
-```
-
-若只是数值收敛但存在越限，则输出：
-
-```text
-last_converged_but_infeasible_case.py
-```
-
-## 九、安全说明
-
-- 不要把 DeepSeek、Kimi 等服务的 API Key 写入代码或提交到仓库；
-- `.venv/`、`runs/`、缓存、界面会话数据和本地密钥文件均不应提交；
-- API Key 仅通过环境变量或界面会话临时输入。
+更多操作说明请查看 [docs](docs/) 目录。
